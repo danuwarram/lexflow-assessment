@@ -1,0 +1,141 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─── Fonts ─────────────────────────────────────────────── */
+@font-face {
+  font-family: "Cabinet Grotesk";
+  src: url("/assets/fonts/CabinetGrotesk-Variable.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Bricolage Grotesque";
+  src: url("/assets/fonts/BricolageGrotesque-Variable.woff2") format("woff2");
+  font-weight: 200 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@layer base {
+  :root {
+    --radius: 0.25rem;
+
+    /* Off-white warm background */
+    --background: 0.97 0.006 85;
+    --foreground: 0.18 0.04 155;
+
+    /* Cards: clean white */
+    --card: 0.99 0.002 85;
+    --card-foreground: 0.18 0.04 155;
+
+    --popover: 0.99 0.002 85;
+    --popover-foreground: 0.18 0.04 155;
+
+    /* Primary: dark forest green */
+    --primary: 0.24 0.07 160;
+    --primary-foreground: 0.97 0.006 85;
+
+    /* Secondary: light warm gray */
+    --secondary: 0.92 0.008 85;
+    --secondary-foreground: 0.18 0.04 155;
+
+    /* Muted */
+    --muted: 0.93 0.005 85;
+    --muted-foreground: 0.52 0.02 155;
+
+    /* Accent: lime / acid green */
+    --accent: 0.85 0.22 132;
+    --accent-foreground: 0.15 0.04 155;
+
+    /* Destructive red */
+    --destructive: 0.577 0.245 27.325;
+    --destructive-foreground: 0.985 0 0;
+
+    /* Borders */
+    --border: 0.88 0.01 85;
+    --input: 0.88 0.01 85;
+    --ring: 0.24 0.07 160;
+
+    /* Charts */
+    --chart-1: 0.85 0.22 132;
+    --chart-2: 0.24 0.07 160;
+    --chart-3: 0.646 0.222 41.116;
+    --chart-4: 0.6 0.118 184.704;
+    --chart-5: 0.769 0.188 70.08;
+
+    /* Sidebar */
+    --sidebar: 0.99 0.002 85;
+    --sidebar-foreground: 0.18 0.04 155;
+    --sidebar-primary: 0.24 0.07 160;
+    --sidebar-primary-foreground: 0.97 0.006 85;
+    --sidebar-accent: 0.93 0.005 85;
+    --sidebar-accent-foreground: 0.18 0.04 155;
+    --sidebar-border: 0.88 0.01 85;
+    --sidebar-ring: 0.24 0.07 160;
+
+    /* Custom brand tokens */
+    --forest: 0.22 0.07 158;
+    --forest-light: 0.32 0.08 158;
+    --lime: 0.85 0.22 132;
+    --lime-dark: 0.72 0.2 132;
+    --warm-off-white: 0.97 0.006 85;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Cabinet Grotesk", sans-serif;
+    font-feature-settings: "ss01" on, "cv01" on;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5 {
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-weight: 700;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: "Bricolage Grotesque", sans-serif;
+  }
+
+  .font-body {
+    font-family: "Cabinet Grotesk", sans-serif;
+  }
+
+  .text-lime {
+    color: oklch(var(--lime));
+  }
+
+  .bg-forest {
+    background-color: oklch(var(--forest));
+  }
+
+  .bg-forest-light {
+    background-color: oklch(var(--forest-light));
+  }
+
+  .text-forest {
+    color: oklch(var(--forest));
+  }
+
+  .border-lime {
+    border-color: oklch(var(--lime));
+  }
+
+  .tracking-widest-plus {
+    letter-spacing: 0.18em;
+  }
+
+  .label-field {
+    @apply text-xs font-semibold tracking-widest-plus uppercase text-muted-foreground;
+  }
+}

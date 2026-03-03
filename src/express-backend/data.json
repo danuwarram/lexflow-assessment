@@ -1,0 +1,42 @@
+{
+  "data": {
+    "companies": [
+      {
+        "id": 1,
+        "name": "nabin singh",
+        "numShareholders": 1,
+        "totalCapital": 1212,
+        "status": "complete",
+        "createdAt": "2026-03-03T03:40:00.299Z"
+      },
+      {
+        "id": 2,
+        "name": "nabin singh",
+        "numShareholders": 1,
+        "totalCapital": 111,
+        "status": "complete",
+        "createdAt": "2026-03-03T03:49:46.356Z"
+      }
+    ],
+    "shareholders": [
+      {
+        "id": 1,
+        "companyId": 1,
+        "firstName": "nabin",
+        "lastName": "singh",
+        "nationality": "nepalese",
+        "createdAt": "2026-03-03T03:40:09.832Z"
+      },
+      {
+        "id": 2,
+        "companyId": 2,
+        "firstName": "nabin",
+        "lastName": "singh",
+        "nationality": "nepalese",
+        "createdAt": "2026-03-03T03:49:53.996Z"
+      }
+    ]
+  },
+  "nextCompanyId": 3,
+  "nextShareholderId": 3
+}

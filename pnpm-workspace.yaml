@@ -1,0 +1,10 @@
+packages:
+  - src/**/*
+
+ignoredBuiltDependencies:
+  - '@biomejs/biome'
+  - better-sqlite3
+  - sharp
+
+onlyBuiltDependencies:
+  - esbuild
