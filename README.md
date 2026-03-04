@@ -23,3 +23,103 @@ Build landing page matching the design mockups (INCORP. wordmark, lime-green acc
 Build multi-step form with progress stepper, inline validation, toast on error, and draft persistence via localStorage + backend
 Build admin dashboard at /admin with company cards and expandable shareholders
 Wire all frontend pages to backend canister APIs via generated bindings
+
+✅ Step 1: Test Both Servers Locally
+Terminal 1 - Backend
+bash
+
+Copy code
+cd /Users/macair/Desktop/company-incorporation-tool/src/express-backend
+pnpm install
+pnpm start
+Expected: Server starts on http://localhost:3000
+
+Terminal 2 - Frontend
+bash
+
+Copy code
+cd /Users/macair/Desktop/company-incorporation-tool/src/frontend
+pnpm install
+pnpm dev
+Expected: App starts on http://localhost:5173
+
+✅ Step 2: Verify Both Are Running
+Test
+
+Command
+
+Expected Result
+
+Backend API
+
+curl http://localhost:3000
+
+Returns JSON response
+
+Frontend
+
+Open http://localhost:5173 in browser
+
+App loads without errors
+
+API Connection
+
+Test form submission in frontend
+
+Data saves to backend
+
+✅ Step 3: Update README.md
+Add this section to your README.md:
+
+markdown
+
+Copy code
+## 🚀 Local Setup Instructions
+
+### Prerequisites
+- Node.js (v18 or higher)
+- pnpm (`npm install -g pnpm`)
+
+### Backend Setup
+```bash
+cd src/express-backend
+pnpm install
+pnpm start
+API runs on: http://localhost:3000
+
+Frontend Setup
+bash
+
+Copy code
+cd src/frontend
+pnpm install
+pnpm dev
+App runs on: http://localhost:5173
+
+Running Both Together
+Open two separate terminal windows:
+
+Terminal 1: Run backend commands above
+Terminal 2: Run frontend commands above
+Testing
+Open http://localhost:5173 in your browser
+Test the application features
+Verify API calls work (check browser console)
+
+Copy code
+
+---
+
+## ✅ Step 4: Create a Test Script (Optional but Recommended)
+
+Create `scripts/test.sh` to make it easier for them:
+
+```bash
+#!/bin/bash
+echo "Starting Backend..."
+cd src/express-backend && pnpm start &
+echo "Starting Frontend..."
+cd src/frontend && pnpm dev &
+echo "Both servers started!"
+echo "Backend: http://localhost:3000"
+echo "Frontend: http://localhost:5173"
